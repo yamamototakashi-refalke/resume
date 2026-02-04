@@ -41,7 +41,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-100 selection:bg-brand-blue selection:text-white">
-      {/* Utility Header (Fixed) */}
+      {/* Utility Header (Fixed) 
       <header className="no-print sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex justify-between items-center h-16">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 text-brand-blue">
@@ -69,7 +69,7 @@ const App: React.FC = () => {
             <span>PDF / 印刷</span>
           </button>
         </div>
-      </header>
+      </header>*/}
 
       {/* Main Content Area */}
       <div className="flex flex-1 overflow-hidden">
