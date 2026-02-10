@@ -34,7 +34,10 @@ export interface ResumeData {
   age: string;
   gender: string;
   address: string;
-  station: string;
+  station: {
+    line: string;
+    name: string;
+  };
   industryExp: string;
   education: string;
   role: string;

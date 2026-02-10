@@ -93,7 +93,7 @@ const App: React.FC = () => {
           <div className="resume-canvas bg-white shadow-2xl shadow-slate-300/50 w-full max-w-[1100px] flex overflow-hidden border border-slate-200 rounded-2xl min-h-[1400px]">
             
             {/* Left Nav Bar */}
-            <nav className="nav-column w-20 md:w-56 border-r border-slate-50 bg-brand-navy py-12 flex flex-col items-center">
+            <nav className="nav-column w-20 md:w-56 border-r border-slate-50 bg-brand-navy py-24 flex flex-col items-center">
               <div className="sticky top-28 w-full px-4 flex flex-col gap-6">
                 <div className="flex flex-col gap-2">
                   {navItems.map((item) => (
@@ -115,27 +115,16 @@ const App: React.FC = () => {
             </nav>
 
             {/* Resume Main Body */}
-            <div className="flex-1 p-10 md:p-16 flex flex-col bg-white">
+            <div className="flex-1 py-24 px-10 md:px-16 flex flex-col bg-white">
               {/* Header */}
               <header className="mb-14 scroll-mt-24" id="overview">
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex flex-col gap-1">
                     <span className="text-xs font-black text-brand-blue tracking-[0.4em] uppercase">{resumeData.role}</span>
-                    <h2 className="text-5xl font-black text-slate-900 tracking-tighter mt-2">{resumeData.name}</h2>
-                    <span className="text-sm font-bold text-slate-400">{resumeData.nameKana}</span>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 grid grid-cols-2 gap-x-8 gap-y-2">
-                    {[
-                      { label: "年齢", value: resumeData.age },
-                      { label: "IT経験", value: resumeData.industryExp },
-                      { label: "最寄駅", value: resumeData.station },
-                      { label: "学歴", value: resumeData.education },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex flex-col">
-                        <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest">{item.label}</span>
-                        <span className="text-[12px] font-bold text-slate-700">{item.value}</span>
-                      </div>
-                    ))}
+                    <div className="mt-3 flex flex-col gap-0.5">
+                      <span className="text-[11px] font-semibold text-slate-500 tracking-wider">{resumeData.nameKana}</span>
+                      <h2 className="text-3xl font-bold text-slate-900 tracking-wide">{resumeData.name}</h2>
+                    </div>
                   </div>
                 </div>
                 <div className="h-1.5 w-16 bg-brand-blue mb-10 rounded-full"></div>
@@ -175,39 +164,64 @@ const App: React.FC = () => {
             </div>
 
             {/* Right Aside */}
-            <aside className="hidden lg:flex w-[340px] border-l border-slate-50 bg-slate-50/30 p-12 flex-col gap-16 overflow-y-auto">
+            <aside className="hidden lg:flex w-[220px] border-l border-slate-50 bg-slate-50/30 py-24 px-6 flex-col gap-10 overflow-y-auto">
               {/* Contact */}
-              <div className="space-y-8">
-                <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">Contact Details</h3>
-                <div className="space-y-6">
-                  {[
-                    { icon: 'alternate_email', value: resumeData.contact.email, label: 'Email' },
-                    { icon: 'phone_iphone', value: resumeData.contact.phone, label: 'Phone' },
-                    { icon: 'location_on', value: resumeData.contact.location, label: 'Address' },
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex flex-col gap-1">
-                      <div className="flex items-center gap-2 text-[9px] font-black text-slate-300 uppercase tracking-widest mb-1">
-                        <span className="material-symbols-outlined !text-[14px]">{item.icon}</span>
-                        {item.label}
-                      </div>
-                      <p className="text-[12px] font-bold text-slate-800 tracking-tight break-all pl-6">{item.value}</p>
+              <div className="space-y-4">
+                <h3 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">Contact Details</h3>
+                <div className="space-y-4">
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1">
+                      <span className="material-symbols-outlined !text-[12px]">location_on</span>
+                      Address
                     </div>
-                  ))}
+                    <p className="text-[10px] font-bold text-slate-800 tracking-tight break-all pl-5">{resumeData.contact.location}</p>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1">
+                      <span className="material-symbols-outlined !text-[12px]">cake</span>
+                      Age
+                    </div>
+                    <p className="text-[10px] font-bold text-slate-800 tracking-tight pl-5">{resumeData.age}</p>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1">
+                      <span className="material-symbols-outlined !text-[12px]">work_history</span>
+                      IT Experience
+                    </div>
+                    <p className="text-[10px] font-bold text-slate-800 tracking-tight pl-5">{resumeData.industryExp}</p>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1">
+                      <span className="material-symbols-outlined !text-[12px]">train</span>
+                      Station
+                    </div>
+                    <div className="text-[10px] font-bold text-slate-800 tracking-tight pl-5 leading-tight">
+                      <div>{resumeData.station.line}</div>
+                      <div>{resumeData.station.name}</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-[8px] font-black text-slate-300 uppercase tracking-widest mb-1">
+                      <span className="material-symbols-outlined !text-[12px]">school</span>
+                      Education
+                    </div>
+                    <p className="text-[10px] font-bold text-slate-800 tracking-tight pl-5">{resumeData.education}</p>
+                  </div>
                 </div>
               </div>
 
               {/* Technical Skills - Categorized */}
-              <div className="space-y-12 scroll-mt-24" id="skills">
-                <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">Skill Inventory</h3>
+              <div className="space-y-8 scroll-mt-24" id="skills">
+                <h3 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">Skill Inventory</h3>
                 {resumeData.skillCategories.map((cat, cIdx) => (
-                  <div key={cIdx} className="space-y-6">
-                    <h4 className="text-[11px] font-black text-brand-blue border-b border-brand-blue/10 pb-2 uppercase tracking-wider">{cat.category}</h4>
-                    <div className="space-y-6">
+                  <div key={cIdx} className="space-y-4">
+                    <h4 className="text-[10px] font-black text-brand-blue border-b border-brand-blue/10 pb-1.5 uppercase tracking-wide">{cat.category}</h4>
+                    <div className="space-y-4">
                       {cat.skills.map((skill, sIdx) => (
                         <div key={sIdx} className="group">
-                          <div className="flex justify-between mb-2 items-end">
-                            <span className="text-[11px] font-black text-slate-800 tracking-tight leading-tight">{skill.name}</span>
-                            <span className="text-[9px] font-black text-brand-blue">{skill.level}%</span>
+                          <div className="flex justify-between mb-1.5 items-end">
+                            <span className="text-[9px] font-black text-slate-800 tracking-tight leading-tight">{skill.name}</span>
+                            <span className="text-[8px] font-black text-brand-blue">{skill.level}%</span>
                           </div>
                           <div className="w-full h-1 bg-slate-200 rounded-full overflow-hidden">
                             <div 
@@ -223,11 +237,11 @@ const App: React.FC = () => {
               </div>
 
               {/* Strengths Tags */}
-              <div className="space-y-6">
-                <h3 className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">Key Strengths</h3>
-                <div className="flex flex-wrap gap-2">
+              <div className="space-y-4">
+                <h3 className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">Key Strengths</h3>
+                <div className="flex flex-wrap gap-1.5">
                   {resumeData.strengths.map((str, idx) => (
-                    <span key={idx} className="bg-white border border-slate-200 px-3 py-1.5 rounded-lg text-[10px] font-bold text-slate-700 tracking-tight shadow-sm">
+                    <span key={idx} className="bg-white border border-slate-200 px-2 py-1 rounded-lg text-[8px] font-bold text-slate-700 tracking-tight shadow-sm">
                       {str}
                     </span>
                   ))}

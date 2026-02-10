@@ -14,31 +14,31 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
           {/* Timeline Dot */}
           <div className={`absolute -left-[36.5px] top-2 size-4 rounded-full border-4 border-white z-10 ${exp.isCurrent ? 'bg-brand-blue' : 'bg-slate-400'}`}></div>
           
-          <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-2">
-            <div>
-              <h4 className="text-xl font-black text-slate-900 leading-tight">{exp.title}</h4>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-500 font-bold text-[11px] mt-2">
-                <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
-                  <span className="material-symbols-outlined !text-[14px]">person</span>
-                  <span>役割: {exp.roleInExp}</span>
-                </div>
-                {exp.scaleInExp && (
-                  <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
-                    <span className="material-symbols-outlined !text-[14px]">groups</span>
-                    <span>規模: {exp.scaleInExp}</span>
-                  </div>
-                )}
-                {exp.osInExp && (
-                  <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
-                    <span className="material-symbols-outlined !text-[14px]">terminal</span>
-                    <span>OS: {exp.osInExp}</span>
-                  </div>
-                )}
-              </div>
+          <div className="flex flex-col mb-6 gap-3">
+            <div className="flex justify-between items-start gap-4">
+              <h4 className="text-xl font-black text-slate-900 leading-tight flex-1">{exp.title}</h4>
+              <span className="text-[9px] font-bold tracking-wide text-slate-400 bg-slate-50 px-2 py-1 rounded border border-slate-100 whitespace-nowrap">
+                {exp.period}
+              </span>
             </div>
-            <span className="text-[10px] font-black tracking-widest text-slate-400 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100 whitespace-nowrap">
-              {exp.period}
-            </span>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-500 font-bold text-[11px]">
+              <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
+                <span className="material-symbols-outlined !text-[14px]">person</span>
+                <span>役割: {exp.roleInExp}</span>
+              </div>
+              {exp.scaleInExp && (
+                <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
+                  <span className="material-symbols-outlined !text-[14px]">groups</span>
+                  <span>規模: {exp.scaleInExp}</span>
+                </div>
+              )}
+              {exp.osInExp && (
+                <div className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-2 py-0.5 rounded">
+                  <span className="material-symbols-outlined !text-[14px]">terminal</span>
+                  <span>OS: {exp.osInExp}</span>
+                </div>
+              )}
+            </div>
           </div>
           
           <p className="text-[14px] text-slate-600 font-medium mb-8 leading-relaxed border-l-2 border-brand-blue/20 pl-4">

@@ -7,14 +7,17 @@ export const RESUME_DATA: ResumeData = {
   age: "38歳",
   gender: "男性",
   address: "埼玉県所沢市",
-  station: "西武新宿線 新所沢駅",
+  station: {
+    line: "西武新宿線",
+    name: "新所沢駅"
+  },
   industryExp: "17年目",
   education: "大学卒業",
   role: "社内SE / PMO / システム導入 / 業務自動化",
   bio: "IT業界16年の経験を持つ社内SEとして、プロジェクトマネジメントからシステム導入、業務自動化まで幅広く従事。特に大規模組織におけるIT資産管理、M365を中心としたクラウド移行プロジェクトの経験を保有。AI活用（Claude、Gemini、GitHub Copilot）による業務効率化やPython・JavaScript・VBAを用いた自動化ツール開発にも積極的に取り組み、月最大100件のサポート対応をこなしながらチーム業務を実施。Apple製品の大規模展開経験も豊富。",
   contact: {
-    email: "takashi.yamamoto@example.jp",
-    phone: "090-xxxx-xxxx",
+    email: "yamamoto.takashi@refalke.co.jp",
+    phone: "070-4445-8958",
     location: "埼玉県所沢市"
   },
   experiences: [
@@ -24,7 +27,7 @@ export const RESUME_DATA: ResumeData = {
       period: "2024年4月 — 2026年3月（予定）",
       isCurrent: true,
       roleInExp: "メンバー",
-      scaleInExp: "チーム内6名 / 全体1000名",
+      scaleInExp: "チーム内3名 / 全体1000名",
       osInExp: "Windows10/11",
       summary: "システム戦略策定、Windows11移行、パスワードマネージャ移行等のプロジェクト管理に従事。AI活用による業務自動化を推進。",
       projects: [
@@ -45,7 +48,7 @@ export const RESUME_DATA: ResumeData = {
       period: "2023年10月 — 2024年3月",
       isCurrent: false,
       roleInExp: "PMO / PL",
-      scaleInExp: "チーム内4名 / 全体3000名",
+      scaleInExp: "チーム内10名 / 全体3000名",
       osInExp: "Windows10/11",
       summary: "リーダーとしてメンバーの業務取りまとめ、プロジェクト進捗管理、会議ファシリテーションを担当。",
       projects: [
