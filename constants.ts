@@ -24,7 +24,7 @@ export const RESUME_DATA: ResumeData = {
     {
       id: "proj-1",
       title: "サポートデスク室の運用設計・業務改善とPMO業務",
-      period: "2024年4月 — 2026年3月（予定）",
+      period: "2024年4月 — 2026年5月（予定）",
       isCurrent: true,
       roleInExp: "メンバー",
       scaleInExp: "チーム内3名 / 全体1000名",
@@ -65,7 +65,7 @@ export const RESUME_DATA: ResumeData = {
     {
       id: "proj-3",
       title: "チーム内プロジェクトの進捗管理・運用業務",
-      period: "2021年2月 — 2023年8月",
+      period: "2021年2月 — 2023年9月",
       isCurrent: false,
       roleInExp: "PL",
       scaleInExp: "チーム内4名 / 全体40名",
@@ -105,7 +105,7 @@ export const RESUME_DATA: ResumeData = {
     {
       id: "proj-5",
       title: "サーバーの保守管理と職員管理システムの構築",
-      period: "2010年4月 — 2015年4月",
+      period: "2010年4月 — 2015年3月",
       isCurrent: false,
       roleInExp: "メンバー",
       scaleInExp: "チーム内3名 / 全体40名",
