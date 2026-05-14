@@ -29,13 +29,13 @@ export const RESUME_DATA: ResumeData = {
       roleInExp: "メンバー",
       scaleInExp: "チーム内3名 / 全体1000名",
       osInExp: "Windows10/11",
-      summary: "システム戦略策定、Windows11移行、パスワードマネージャ移行等のプロジェクト管理に従事。AI活用による業務自動化を推進。",
+      summary: "システム戦略策定、Windows11移行、メールサーバー移行等のプロジェクト管理に従事。AI活用による業務自動化を推進。",
       projects: [
         {
           name: "ITインフラ刷新プロジェクト",
-          role: "PMO / システム導入担当",
+          role: "メンバー",
           period: "2024年4月 — 継続中",
-          description: "Windows11/25H2移行管理、SASE移行、M365ライセンス管理、AI（Claude, Gemini）を活用した業務自動化ツールの実装。",
+          description: "Windows11/25H2移行管理、SASE移行、メールサーバー移行、M365ライセンス管理、AI（Claude, Gemini）を活用した業務自動化ツールの実装。",
           technologies: ["M365", "Azure", "SASE(CATO)", "Python", "n8n", "PowerAutomate", "Claude/Gemini/Copilot"],
           scale: "1000名規模",
           os: "Windows 11"
